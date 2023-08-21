@@ -42,7 +42,7 @@ private final EmployeeRepository employeeRepository;
         if(employeeObj.isPresent()){
             Employee updateEmployee = employeeObj.get();
             updateEmployee.setSalary(employee.getSalary());
-            Employee employee1 = employeeRepository.save(updateEmployee);
+            employeeRepository.save(updateEmployee);
         }
         return employeeObj;
     }
